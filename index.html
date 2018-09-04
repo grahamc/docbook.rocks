@@ -1,0 +1,64 @@
+<style>
+  body {
+      font-size: 17px;
+      line-height: 1.7;
+      font-family: helvetica;
+  }
+
+  div {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+</style>
+
+<center>
+  <h1>docbook rocks!</h1>
+  <p>it just takes a bit for it to be normal</p>
+</center>
+
+<div>
+<h2>how to make a paragraph</h2>
+<pre>
+  &lt;para&gt;
+    your text goes here!
+    it isn't
+    whitespace
+
+    sensitive,
+
+    though.
+  &lt;/para&gt;
+
+  &lt;para&gt;
+    Feel free to break up your sentences in to as many lines as you
+    like.
+  &lt;/para&gt;
+</pre>
+
+<h2>how to show console output</h2>
+<pre>
+  &lt;screen&gt;
+    $ git clone https://github.com/grahamc/docbook.rocks.git
+  &lt;/screen&gt;
+</pre>
+
+<p>but if you want to make it even better,</p>
+
+<pre>
+  &lt;screen&gt;
+    &lt;prompt&gt;$ &lt;prompt&gt;git clone https://github.com/grahamc/docbook.rocks.git
+  &lt;/screen&gt;
+</pre>
+
+and then you can add some display code to prevent the <tt>$ </tt> from
+being copied:
+
+<pre>
+  .prompt {
+    user-select: none;
+    -moz-user-select: none;
+  }
+</pre>
+
+</div>
