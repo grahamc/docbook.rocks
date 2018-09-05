@@ -152,3 +152,10 @@ table#escaping-characters th:nth-child(1) {
 table#escaping-characters th:nth-child(2) {
     width: 30%;
 }
+
+
+img {
+    height: 1em;
+    margin-bottom: -0.25em;
+    padding-left: .5em;
+}

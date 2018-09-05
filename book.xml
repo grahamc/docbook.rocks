@@ -7,6 +7,23 @@
    <title>DocBook rocks!</title>
  </info>
 
+ <section xml:id="who-is-this-for">
+   <para>
+     Me: I'm a quick dive in to about ten DocBook tags which will let
+     you get going and documenting pretty much everything you need.
+   </para>
+   <para>
+     You: You're maybe a bit skeptical of DocBook, but need to write a
+     page or two of documentation and got spooked by the extremely
+     thorough and extremely intimidating <link
+     xlink:href="https://tdg.docbook.org/">official
+     documentation</link>.
+   </para>
+   <para>
+     You have an open mind and aren't alergic to a
+     <literal>&lt;</literal> and a <literal>&gt;</literal>.
+   </para>
+ </section>
  <section xml:id="why-not-markdown">
    <title>Why Not Markdown?</title>
    <blockquote>
