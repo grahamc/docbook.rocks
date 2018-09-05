@@ -113,6 +113,42 @@
        <xi:include href="./list-ordered.xml" />
      </example>
 
+     <para>or a list with multiple paragraphs:</para>
+
+     <example>
+       <programlisting><xi:include href="./lists-paras.xml" parse="text" /></programlisting>
+       <xi:include href="./lists-paras.xml" />
+     </example>
+
+     <para>or a list with a blockquote:</para>
+
+     <example>
+       <programlisting><xi:include href="./lists-quote.xml" parse="text" /></programlisting>
+       <xi:include href="./lists-quote.xml" />
+     </example>
+
+     <para>
+       It’s worth noting that it isn't possible to trigger an
+       ordered list by accident.
+     </para>
+   </section>
+
+   <section xml:id="code-blocks">
+     <title>Code Blocks</title>
+
+     <example>
+       <programlisting><xi:include href="./code-blocks.xml" parse="text" /></programlisting>
+       <xi:include href="./code-blocks.xml" />
+     </example>
+
+     <para>
+       but if you'll have a lot of &lt;s you'll probably want to
+       use a <literal>CDATA</literal> section.
+     </para>
+     <example>
+       <programlisting><xi:include href="./code-blocks-cdata.xml" parse="text" /></programlisting>
+       <xi:include href="./code-blocks-cdata.xml" />
+     </example>
    </section>
 
  </chapter>

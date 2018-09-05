@@ -1,0 +1,4 @@
+<programlisting>
+#!/bin/sh
+git clone https://github.com/grahamc/docbook.rocks.git
+</programlisting>
