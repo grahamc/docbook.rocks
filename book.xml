@@ -1,0 +1,119 @@
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xml:id="book-docbook-rocks"
+      version="5.0">
+ <info>
+   <title>docbook rocks!</title>
+ </info>
+
+ <section xml:id="why-not-markdown">
+   <title>Why Not Markdown?</title>
+   <blockquote>
+     <attribution>
+       <link xlink:href="https://daringfireball.net/projects/markdown/syntax#philosophy">DaringFireball</link>
+     </attribution>
+     <simpara>
+       Markdown is intended to be as easy-to-read and easy-to-write as
+       is feasible.
+     </simpara>
+
+     <simpara>
+       Markdown’s syntax is intended for one purpose: to be used as a
+       format for writing for the web.
+     </simpara>
+
+     <simpara>
+       Markdown is not a replacement for HTML, or even close to it.
+       Its syntax is very small, corresponding only to a very small
+       subset of HTML tags.
+     </simpara>
+     <simpara>
+       The idea for Markdown is to make it easy to read, write, and
+       edit prose. HTML is a publishing format; Markdown is a writing
+       format. Thus, Markdown's formatting syntax only addresses
+       issues that can be conveyed in plain text.
+     </simpara>
+     <simpara>
+       For any markup that is not covered by Markdown’s syntax, you
+       simply use HTML itself.
+     </simpara>
+   </blockquote>
+   <para>
+     In summary, if you're looking to do something more than write
+     prose, Markdown might not be the tool for you. If you're not
+     targeting HTML (or you're targeting more than
+     <emphasis>just</emphasis> HTML like man pages) then Markdown
+     might not be the right tool for you.
+   </para>
+ </section>
+
+ <chapter xml:id="block-elements">
+   <title>Block Elements</title>
+
+   <section xml:id="paragraphs">
+     <title>Paragraphs an Line Breaks</title>
+
+     <example>
+       <programlisting><xi:include href="./paras.xml" parse="text" /></programlisting>
+       <xi:include href="./paras.xml" />
+     </example>
+   </section>
+
+   <section xml:id="headers">
+     <title>Headers</title>
+
+     <para>
+       Docbook automatically applies the right header for your
+       content, based on its <emphasis>nesting</emphasis>.
+     </para>
+
+     <example>
+       <programlisting><xi:include href="./headers.xml" parse="text" /></programlisting>
+       <xi:include href="./headers.xml" />
+     </example>
+
+
+     <para>
+       Sometimes, you may want a subtitle. Docbook supports that!
+     </para>
+
+     <example>
+       <programlisting><xi:include href="./subtitles.xml" parse="text" /></programlisting>
+       <xi:include href="./subtitles.xml" />
+     </example>
+   </section>
+
+   <section xml:id="blockquotes">
+     <title>Blockquotes</title>
+
+     <para>Blockqoutes are easy, and support a lot o the other
+     elements, too:</para>
+
+     <example>
+       <programlisting><xi:include href="./blockquotes.xml" parse="text" /></programlisting>
+       <xi:include href="./blockquotes.xml" />
+     </example>
+   </section>
+
+   <section xml:id="lists">
+     <title>Lists</title>
+
+     <para>
+       Docbook supports ordered and unordered lists.
+     </para>
+
+     <example>
+       <programlisting><xi:include href="./list-unordered.xml" parse="text" /></programlisting>
+       <xi:include href="./list-unordered.xml" />
+     </example>
+
+     <example>
+       <programlisting><xi:include href="./list-ordered.xml" parse="text" /></programlisting>
+       <xi:include href="./list-ordered.xml" />
+     </example>
+
+   </section>
+
+ </chapter>
+</book>

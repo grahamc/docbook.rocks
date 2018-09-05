@@ -1,0 +1,125 @@
+body {
+  line-height: 1.7;
+  font-size: 17px;
+  margin: 0;
+}
+
+.prompt {
+  user-select: none;
+  -moz-user-select: none;
+}
+
+.book {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.note {
+  margin-left: -2.5em;
+  background-color: #fffde0;
+  padding-left: 1em;
+  border-left: 1em solid #fcf6b4;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+code.literal, code.varname {
+  background-color: #dcdcdc66;
+}
+
+.programlisting {
+  color: white;
+  background-color: #282c34;
+  margin-left: -2.5em;
+  border-radius: .5em;
+
+  padding-left: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-right: .5em;
+
+  overflow: hidden;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-name,
+.hljs-attr,
+.hljs-strong {
+  color: #c5a5c5;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-built_in,
+.hljs-literal,
+.hljs-type,
+.hljs-addition,
+.hljs-tag,
+.hljs-quote,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #9bc977;
+}
+
+.hljs-meta,
+.hljs-subst,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-attribute,
+.hljs-deletion,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-bullet {
+  color: #4c81c9;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+
+h1.title {
+  font-size: 3em;
+  font-weight: bolder;
+  color: #282c34;
+}
+
+body {
+  width: 100%;
+  font-family: helvetica;
+}
+div.toc {
+  display: none;
+}
+
+div.book > div.toc {
+  display: block;
+  /*width: 37%;*/
+  /*! float: right; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #f7f7f7;
+  padding-left: 1em;
+}
+
+.toc-title { display: none; }
+
+dl.toc > dd > dl {
+  display: none;
+}
+.list-of-examples {
+  display: none;
+}
