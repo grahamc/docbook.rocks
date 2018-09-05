@@ -1,0 +1,9 @@
+<para>
+  If you're a bit freaked out by DocBook, check out <link
+  xlink:href="https://docbook.rocks">DocBook Rocks</link> for a
+  really gentle introduction, and a "just-the-basics" look at
+  how to be productive with DocBook. In particular, there
+  is a nice section about why you might choose DocBook over
+  something like Markdown: <link
+  xlink:href="docbook.rocks/#why-not-markdown" />.
+</para>

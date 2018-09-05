@@ -44,6 +44,7 @@ code.literal, code.varname {
   padding-right: .5em;
 
   overflow: hidden;
+  white-space: pre-wrap;
 }
 
 .hljs-keyword,
@@ -100,14 +101,11 @@ body {
   width: 100%;
   font-family: helvetica;
 }
-div.toc {
-  display: none;
-}
 
 div.book > div.toc {
   display: block;
-  /*width: 37%;*/
-  /*! float: right; */
+  width: 20%;
+  float: right;
   position: fixed;
   top: 0;
   right: 0;
@@ -115,11 +113,38 @@ div.book > div.toc {
   padding-left: 1em;
 }
 
-.toc-title { display: none; }
-
-dl.toc > dd > dl {
-  display: none;
+.list-of-examples, .list-of-tables, .toc-title {
+    display: none;
 }
-.list-of-examples {
-  display: none;
+
+.note .programlisting {
+    /* Program listings inside of a note would blow out the note box. */
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+
+
+table#escaping-characters {
+  margin-left: -5em;
+  margin-right: -5em;
+  border-collapse: collapse;
+}
+
+table#escaping-characters td {
+  border-top: 1px solid black;
+  padding-right : 3em;
+}
+
+table#escaping-characters {
+    text-align: center;
+}
+
+
+table#escaping-characters th:nth-child(1) {
+    width: 20%;
+}
+
+table#escaping-characters th:nth-child(2) {
+    width: 30%;
 }

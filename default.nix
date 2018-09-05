@@ -1,20 +1,22 @@
-{ runCommand, stdenv, lib, jing, libxslt, docbook5, docbook5_xsl, libxml2 }:
+{ runCommand, stdenv, lib, jing, libxslt, docbook5, docbook5_xsl,
+  libxml2, callPackage }:
 let
+  documentation-highlighter = callPackage ./documentation-highlighter {};
   manualXsltprocOptions = toString [
     "--param section.autolabel 1"
     "--param section.label.includes.component.label 1"
     "--stringparam html.stylesheet style.css"
+    "--stringparam html.script './highlightjs/highlight.pack.js ./highlightjs/loader.js'"
     "--param xref.with.number.and.title 1"
     "--param toc.section.depth 3"
     "--stringparam admon.style ''"
     "--stringparam callout.graphics.extension .svg"
     "--stringparam current.docid book-docbook-rocks"
-    #"--param chunk.section.depth 0"
     #"--param chunk.first.sections 1"
     #"--param use.id.as.filename 1"
     "--param make.clean.html 1"
     "--param suppress.navigation 1"
-    "--stringparam generate.toc 'book'"
+    #"--stringparam generate.toc 'book chapter section'"
     "--param id.warnings 1"
   ];
 
@@ -43,5 +45,10 @@ in stdenv.mkDerivation {
     cp -r ${docbook5_xsl}/xml/xsl/docbook/images/callouts $dst/images/callouts
 
     cp ${./style.css} $dst/style.css
+    mkdir $dst/highlightjs/
+    cp ${documentation-highlighter}/highlight.pack.js \
+       ${documentation-highlighter}/LICENSE \
+       ${documentation-highlighter}/loader.js \
+       $dst/highlightjs/
   '';
 }

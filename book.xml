@@ -4,7 +4,7 @@
       xml:id="book-docbook-rocks"
       version="5.0">
  <info>
-   <title>docbook rocks!</title>
+   <title>DocBook rocks!</title>
  </info>
 
  <section xml:id="why-not-markdown">
@@ -52,7 +52,7 @@
    <title>Block Elements</title>
 
    <section xml:id="paragraphs">
-     <title>Paragraphs an Line Breaks</title>
+     <title>Paragraphs and Line Breaks</title>
 
      <example>
        <programlisting><xi:include href="./paras.xml" parse="text" /></programlisting>
@@ -64,7 +64,7 @@
      <title>Headers</title>
 
      <para>
-       Docbook automatically applies the right header for your
+       DocBook automatically applies the right header for your
        content, based on its <emphasis>nesting</emphasis>.
      </para>
 
@@ -75,7 +75,7 @@
 
 
      <para>
-       Sometimes, you may want a subtitle. Docbook supports that!
+       Sometimes, you may want a subtitle. DocBook supports that!
      </para>
 
      <example>
@@ -87,7 +87,7 @@
    <section xml:id="blockquotes">
      <title>Blockquotes</title>
 
-     <para>Blockqoutes are easy, and support a lot o the other
+     <para>Blockqoutes are easy, and support a lot of the other
      elements, too:</para>
 
      <example>
@@ -100,7 +100,7 @@
      <title>Lists</title>
 
      <para>
-       Docbook supports ordered and unordered lists.
+       DocBook supports ordered and unordered lists.
      </para>
 
      <example>
@@ -136,20 +136,133 @@
    <section xml:id="code-blocks">
      <title>Code Blocks</title>
 
-     <example>
-       <programlisting><xi:include href="./code-blocks.xml" parse="text" /></programlisting>
+     <example xml:id="codeblocks-xml-with-bash">
+       <programlisting language="xml"><xi:include href="./code-blocks.xml" parse="text" /></programlisting>
        <xi:include href="./code-blocks.xml" />
      </example>
 
+     <note>
+       <para>
+         If you'll have a lot of <literal>&lt;</literal>s,
+         <literal>&gt;</literal>s, or <literal>&amp;</literal>s like
+         you're embedding a bunch of XML or HTML, you'll probably want
+         to use a <literal>CDATA</literal> section instead of <link
+         linkend="special-characters">escaping them all</link>:
+       </para>
+       <example>
+         <programlisting language="xml"><xi:include href="./code-blocks-cdata.xml" parse="text" /></programlisting>
+         <xi:include href="./code-blocks-cdata.xml" />
+       </example>
+     </note>
+   </section>
+ </chapter>
+
+ <chapter xml:id="span-elements">
+   <title>Span Elements</title>
+   <section xml:id="links">
+     <title>Links</title>
+
      <para>
-       but if you'll have a lot of &lt;s you'll probably want to
-       use a <literal>CDATA</literal> section.
+       DocBook supports a normal URL links:
      </para>
+
      <example>
-       <programlisting><xi:include href="./code-blocks-cdata.xml" parse="text" /></programlisting>
-       <xi:include href="./code-blocks-cdata.xml" />
+       <programlisting><xi:include href="./link-http.xml" parse="text" /></programlisting>
+       <xi:include href="./link-http.xml" />
+     </example>
+
+     <para>
+       and also has a special method for linking within the same
+       document:
+     </para>
+
+     <example>
+       <programlisting><xi:include href="./link-inter.xml" parse="text" /></programlisting>
+       <xi:include href="./link-inter.xml" />
+     </example>
+
+     <para>
+       The name <literal>&lt;xref&gt;</literal> may be a bit weird of
+       a name at first. Maybe remembering it like a
+       <emphasis>crossreference</emphasis> will help.
+     </para>
+   </section>
+
+   <section xml:id="emphasis">
+     <title>Emphasis</title>
+     <para>
+       DocBook documents typically only italicize for emphasis, though
+       this is depends on how you process your document.
+     </para>
+
+     <example>
+       <programlisting><xi:include href="./emphasis.xml" parse="text" /></programlisting>
+       <xi:include href="./emphasis.xml" />
      </example>
    </section>
 
+   <section xml:id="inline-code">
+     <title>Code</title>
+
+     <para>
+       To write a bit of code inside a paragraph, wrap it in
+       <literal>&lt;literal&gt;&lt;/literal&gt;</literal>:
+     </para>
+
+     <example>
+       <programlisting><xi:include href="./code-inline.xml" parse="text" /></programlisting>
+       <xi:include href="./code-inline.xml" />
+     </example>
+   </section>
+ </chapter>
+
+ <chapter xml:id="miscellaneous">
+   <title>Miscellaneous</title>
+   <section xml:id="special-characters">
+     <title>Escaping Special Characters</title>
+     <para>
+       DocBook requires the author to escape a few symbols, depending
+       on where you are using them.
+     </para>
+     <table id="escaping-characters">
+       <thead>
+         <tr>
+           <th>Symbol</th>
+           <th>How to type it instead</th>
+           <th>When</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td><literal>&lt;</literal></td>
+           <td><para><literal>&amp;lt;</literal></para><para>as in <emphasis>less than</emphasis></para></td>
+           <td>Everywhere in your document.</td>
+         </tr>
+         <tr>
+           <td><literal>&gt;</literal></td>
+           <td><para><literal>&amp;gt;</literal></para><para>as in <emphasis>greater than</emphasis></para></td>
+           <td>Everywhere in your document.</td>
+         </tr>
+         <tr>
+           <td><literal>&amp;</literal></td>
+           <td><para><literal>&amp;amp;</literal></para><para> as in <emphasis>ampersand</emphasis></para></td>
+           <td>Everywhere in your document.</td>
+         </tr>
+         <tr>
+           <td><literal>&quot;</literal></td>
+           <td><para><literal>&amp;quot;</literal></para><para>as in <emphasis>quote</emphasis></para></td>
+           <td>Only inside attributes using a double quote, like <literal>&lt;foo
+           xlink:title=&quot;&amp;quot;DocBook&amp;quot; the
+           Musical&quot;&gt;</literal>.</td>
+         </tr>
+         <tr>
+           <td><literal>&apos;</literal></td>
+           <td><para><literal>&amp;apos;</literal></para><para>as in <emphasis>apostrophe</emphasis></para></td>
+           <td>Only inside attributes using a single quote, like <literal>&lt;foo
+           xlink:title=&apos;It&amp;apos;s DocBook!&apos;&gt;</literal>.</td>
+         </tr>
+       </tbody>
+     </table>
+   </section>
  </chapter>
 </book>

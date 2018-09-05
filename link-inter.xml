@@ -1,0 +1,11 @@
+<section>
+  <section xml:id="section-one">
+    <title>A nice section demonstrating linking
+    inside the same document</title>
+    <para>Definitely go check out <xref linkend="section-two" />!</para>
+  </section>
+
+  <section xml:id="section-two">
+    <title>Another section, look at that!</title>
+  </section>
+</section>
