@@ -269,14 +269,13 @@
            <td><literal>&quot;</literal></td>
            <td><para><literal>&amp;quot;</literal></para><para>as in <emphasis>quote</emphasis></para></td>
            <td>Only inside attributes using a double quote, like <literal>&lt;foo
-           xlink:title=&quot;&amp;quot;DocBook&amp;quot; the
-           Musical&quot;&gt;</literal>.</td>
+           xlink:title=&quot;a &amp;quot;can do&amp;quot; attitude!&quot;&gt;</literal>.</td>
          </tr>
          <tr>
            <td><literal>&apos;</literal></td>
            <td><para><literal>&amp;apos;</literal></para><para>as in <emphasis>apostrophe</emphasis></para></td>
            <td>Only inside attributes using a single quote, like <literal>&lt;foo
-           xlink:title=&apos;It&amp;apos;s DocBook!&apos;&gt;</literal>.</td>
+           xlink:title=&apos;it isn&amp;apos;t impossible!&apos;&gt;</literal>.</td>
          </tr>
        </tbody>
      </table>
@@ -388,4 +387,13 @@ $ nix-shell
      </para>
    </section>
   </chapter>
+  <colophon>
+    <para>
+      Built with <link xlink:href="https://nixos.org/nix">Nix</link>,
+      DocBook, and HighlighterJS. The text is authored by
+      <author><firstname>Graham</firstname> <surname>Christensen</surname></author>.
+      The source can be found at <link xlink:href="https://github.com/grahamc/docbook.rocks"
+      />. This document is licensed CC-BY-SA-4.0.
+    </para>
+  </colophon>
 </book>

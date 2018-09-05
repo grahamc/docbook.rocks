@@ -2,6 +2,11 @@ body {
   line-height: 1.7;
   font-size: 17px;
   margin: 0;
+  overflow-wrap: break-word
+}
+
+code {
+    overflow-wrap: break-word;
 }
 
 .prompt {
@@ -9,20 +14,14 @@ body {
   -moz-user-select: none;
 }
 
-.book {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 a {
   text-decoration: none;
 }
 
 .note {
-  margin-left: -2.5em;
   background-color: #fffde0;
   padding-left: 1em;
+  padding-right: 1em;
   border-left: 1em solid #fcf6b4;
   padding-top: .5em;
   padding-bottom: .5em;
@@ -32,10 +31,9 @@ code.literal, code.varname {
   background-color: #dcdcdc66;
 }
 
-.programlisting {
+.programlisting, .screen {
   color: white;
   background-color: #282c34;
-  margin-left: -2.5em;
   border-radius: .5em;
 
   padding-left: 1em;
@@ -102,15 +100,57 @@ body {
   font-family: helvetica;
 }
 
-div.book > div.toc {
-  display: block;
-  width: 20%;
-  float: right;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #f7f7f7;
-  padding-left: 1em;
+
+@media only screen and (max-width: 949px) {
+  .book {
+      width: 95%;
+      overflow-wrap: auto;
+      margin-left: 1em;
+      margin-right: 1em;
+  }
+
+  .programlisting, .screen {
+      margin-right:1em;
+  }
+}
+
+
+@media only screen and (min-width: 950px) {
+    .book {
+        width: 50%;
+        margin-left: 20%;
+        margin-right: auto;
+    }
+    .note {
+        margin-left: -2.5em;
+    }
+
+    div.book > div.toc {
+        display: block;
+        width: 20%;
+        float: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        background-color: #f7f7f7;
+        padding-left: 1em;
+    }
+
+  .programlisting, .screen {
+      margin-left: -2.5em;
+  }
+
+  table#escaping-characters {
+      margin-left: -5em;
+      margin-right: -5em;
+  }
+
+  table#escaping-characters td {
+      padding-right : 3em;
+  }
+
 }
 
 .list-of-examples, .list-of-tables, .toc-title {
@@ -121,7 +161,7 @@ div.book > div.toc {
     display: none;
 }
 
-.note .programlisting {
+.note .programlisting, .note .screen {
     /* Program listings inside of a note would blow out the note box. */
     margin-left: auto;
     margin-right: 1em;
@@ -130,14 +170,12 @@ div.book > div.toc {
 
 
 table#escaping-characters {
-  margin-left: -5em;
-  margin-right: -5em;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 table#escaping-characters td {
   border-top: 1px solid black;
-  padding-right : 3em;
 }
 
 table#escaping-characters {

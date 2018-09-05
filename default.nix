@@ -41,6 +41,8 @@ in stdenv.mkDerivation {
       ${docbook5_xsl}/xml/xsl/docbook/xhtml/docbook.xsl \
       ./combined.xml
 
+    sed -i -e 's#</head>#<meta name="viewport" content="width=device-width, initial-scale=1"></head>#' $out/index.html
+
     mkdir -p $dst/images
     cp -r ${docbook5_xsl}/xml/xsl/docbook/images/callouts $dst/images/callouts
 
