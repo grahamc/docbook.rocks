@@ -265,4 +265,110 @@
      </table>
    </section>
  </chapter>
+
+  <chapter xml:id="fancy-stuff">
+   <title>Fancy Stuff</title>
+   <section xml:id="prompt">
+     <title>Prompts in Command Lines</title>
+     <para>
+       Copy and paste the following commands:
+     </para>
+
+     <xi:include href="./screen-prompt.xml" />
+
+     <para>
+       You'll notice you only copied the commands, and not the
+       prompt's <literal>$ </literal>.
+     </para>
+
+     <para>
+       With Markdown you might imagine having a special fenced
+       codeblock, like
+
+       <programlisting>
+```shell-commands
+git clone https://github.com/grahamc/docbook.rocks.git
+cd docbook.rocks
+```</programlisting>
+
+       and having it automatically prefix the lines with an
+       unselectable <literal>$ </literal>. This would be interesting,
+       but undesirable because you wouldn't want
+
+       <programlisting>
+```shell-commands
+git clone https://github.com/grahamc/docbook.rocks.git
+Cloning into 'docbook.rocks'...
+remote: Counting objects: 52, done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 52 (delta 19), reused 48 (delta 15), pack-reused 0
+Unpacking objects: 100% (52/52), done.
+```</programlisting>
+
+       to turn in to
+
+              <programlisting>
+```shell-commands
+$ git clone https://github.com/grahamc/docbook.rocks.git
+$ Cloning into 'docbook.rocks'...
+$ remote: Counting objects: 52, done.
+$ remote: Compressing objects: 100% (36/36), done.
+$ remote: Total 52 (delta 19), reused 48 (delta 15), pack-reused 0
+$ Unpacking objects: 100% (52/52), done.
+```</programlisting>
+     </para>
+
+     <para>
+       You might imagine having your parser detect the existing
+       prompts and fix them:
+
+       <programlisting>
+```shell-commands
+$ git clone https:/b/github.com/grahamc/docbook.rocks.git
+Cloning into 'docbook.rocks'...
+remote: Counting objects: 52, done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 52 (delta 19), reused 48 (delta 15), pack-reused 0
+Unpacking objects: 100% (52/52), done.
+$ cd docbook.rocks
+``` </programlisting>
+
+       having it automatically change the <literal>$ </literal> to be
+       unselectable.
+     </para>
+
+     <para>
+       But what about if your prompt changes, like
+
+       <programlisting>
+$ su -i
+# </programlisting>
+
+       sure you could detect <literal>#</literal> too... but what
+       about something fancier, like:
+       <programlisting>
+$ git clone https:/b/github.com/grahamc/docbook.rocks.git
+Cloning into 'docbook.rocks'...
+remote: Counting objects: 52, done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 52 (delta 19), reused 48 (delta 15), pack-reused 0
+Unpacking objects: 100% (52/52), done.
+$ cd docbook.rocks
+$ nix-shell
+[nix-shell:~/docbook.rocks]$
+</programlisting>
+
+       Having your markdown processer handle each of these cases is
+       quite complicated, and we haven't even addressed cases where
+       the prompt may be inside of another program.
+     </para>
+     <para>
+       With DocBook, there is an optional, built-in tag to explicitly
+       mark the prompt:
+
+       <programlisting><xi:include href="./screen-prompt.xml"
+       parse="text" /></programlisting>
+     </para>
+   </section>
+  </chapter>
 </book>

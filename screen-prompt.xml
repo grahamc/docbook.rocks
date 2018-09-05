@@ -1,0 +1,4 @@
+<screen>
+<prompt>$ </prompt>git clone https://github.com/grahamc/docbook.rocks.git
+<prompt>$ </prompt>cd docbook.rocks
+</screen>

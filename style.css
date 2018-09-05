@@ -117,6 +117,10 @@ div.book > div.toc {
     display: none;
 }
 
+.chapter > .toc {
+    display: none;
+}
+
 .note .programlisting {
     /* Program listings inside of a note would blow out the note box. */
     margin-left: auto;
