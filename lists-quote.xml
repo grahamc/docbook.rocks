@@ -2,13 +2,13 @@
   <listitem>
     <blockquote>
       <attribution>
-        <link xlink:href="https://daringfireball.net/projects/markdown/syntax#philosophy">DaringFireball</link>
+        <link xlink:href="http://www.tldp.org/HOWTO/DocBook-Demystification-HOWTO/x57.html">Why care about DocBook at all?</link>
       </attribution>
       <para>
-        The idea for Markdown is to make it easy to
-        read, write, and edit
-        <emphasis>prose</emphasis> and easy-to-write
-        as is feasible.
+        There are two possibilities that make DocBook
+        really interesting. One is multi-mode
+        rendering and the other is searchable
+        documentation databases.
       </para>
     </blockquote>
   </listitem>

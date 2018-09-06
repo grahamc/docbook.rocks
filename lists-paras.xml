@@ -5,10 +5,9 @@
     </para>
 
     <para>
-      This is the second paragraph in the list item.
-      You're only required to indent the first line.
-      Lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit.
+      This is the second paragraph in the list
+      item, you don't have to do anything special
+      here but keep adding para tags :)
     </para>
   </listitem>
   <listitem>

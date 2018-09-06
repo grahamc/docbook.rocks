@@ -1,3 +1,5 @@
 <programlisting><![CDATA[
-<grahamc> hey, check out https://docbook.rocks!
+<para>
+  No need to escape each < > or &
+</para>
 ]]></programlisting>

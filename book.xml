@@ -26,44 +26,55 @@
      <literal>&lt;</literal> and a <literal>&gt;</literal>.
    </para>
  </section>
- <section xml:id="why-not-markdown">
-   <title>Why Not Markdown?</title>
-   <blockquote>
-     <attribution>
-       <link xlink:href="https://daringfireball.net/projects/markdown/syntax#philosophy">DaringFireball</link>
-     </attribution>
-     <simpara>
-       Markdown is intended to be as easy-to-read and easy-to-write as
-       is feasible.
-     </simpara>
-
-     <simpara>
-       Markdown’s syntax is intended for one purpose: to be used as a
-       format for writing for the web.
-     </simpara>
-
-     <simpara>
-       Markdown is not a replacement for HTML, or even close to it.
-       Its syntax is very small, corresponding only to a very small
-       subset of HTML tags.
-     </simpara>
-     <simpara>
-       The idea for Markdown is to make it easy to read, write, and
-       edit prose. HTML is a publishing format; Markdown is a writing
-       format. Thus, Markdown's formatting syntax only addresses
-       issues that can be conveyed in plain text.
-     </simpara>
-     <simpara>
-       For any markup that is not covered by Markdown’s syntax, you
-       simply use HTML itself.
-     </simpara>
-   </blockquote>
+ <section xml:id="why-docbook">
+   <title>Why DocBook?</title>
    <para>
-     In summary, if you're looking to do something more than write
-     prose, Markdown might not be the tool for you. If you're not
-     targeting HTML (or you're targeting more than
-     <emphasis>just</emphasis> HTML like man pages) then Markdown
-     might not be the right tool for you.
+     The project you're working on may have chosen DocBook, and maybe
+     you're not sure why. "But why not Markdown?" is something I
+     hear a lot.
+   </para>
+
+   <para>
+     In John Gruber's words, Markdown is not always the right tool for
+     the job.
+
+     <blockquote>
+       <attribution>
+         <link xlink:href="https://daringfireball.net/projects/markdown/syntax#philosophy">DaringFireball</link>
+       </attribution>
+
+       <simpara>
+         The idea for Markdown is to make it easy to read, write, and
+         edit prose. HTML is a publishing format; Markdown is a
+         writing format. Thus, Markdown's formatting syntax only
+         addresses issues that can be conveyed in plain text.
+       </simpara>
+     </blockquote>
+   </para>
+
+   <para>
+     DocBook is really designed <emphasis>for</emphasis> documentation.
+     Yes it is more verbose (<emphasis>explicit</emphasis>). Yeah, it
+     uses some pointy bois (<literal>&lt;</literal>, <literal>&gt;</literal>)
+     which aren't all a lot of fun to type.
+   </para>
+
+   <para>
+     These explicit ways of marking up a document are a bit annoying
+     when writing prose and paragraphs. However, they become helpful
+     when doing more complicated things. DocBook has good and
+     predictable built-in support for making tables, code snippets
+     with inline annotations, checked cross-references between
+     sections and many other features which are very useful for
+     documenting complicated projects.
+   </para>
+
+   <para>
+     DocBook is also much more than a format for writing to HTML.
+     Using a free set of what is called "Stylesheets" (not CSS
+     stylesheets) DocBook can be converted in to manpages, PDFs, and
+     yes HTML. With DocBook, indexes and tables of contents come for
+     free.
    </para>
  </section>
 

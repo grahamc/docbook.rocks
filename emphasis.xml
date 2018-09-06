@@ -1,6 +1,5 @@
 <para>
-  Markdown is a good tool for writing <emphasis>prose
-  for the web</emphasis>.
-  It is un<emphasis>frigging</emphasis> believably
-  good at that.
+  DocBook has a whole lot of tags, but you probably don't need them
+  <emphasis>all</emphasis>. Don't be scared off by them if you look at
+  the official documentation.
 </para>
