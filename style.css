@@ -140,11 +140,7 @@ body {
 
   .programlisting, .screen {
       margin-left: -2.5em;
-  }
-
-  table#escaping-characters {
-      margin-left: -5em;
-      margin-right: -5em;
+      margin-right: -2.5em;
   }
 
   table#escaping-characters td {
@@ -168,20 +164,14 @@ body {
 }
 
 
-
-table#escaping-characters {
+table {
     width: 100%;
     border-collapse: collapse;
-}
-
-table#escaping-characters td {
-  border-top: 1px solid black;
-}
-
-table#escaping-characters {
     text-align: center;
 }
-
+table td {
+  border-top: 1px solid black;
+}
 
 table#escaping-characters th:nth-child(1) {
     width: 20%;
