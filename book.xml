@@ -124,6 +124,16 @@
        <programlisting><xi:include href="./blockquotes.xml" parse="text" /></programlisting>
        <xi:include href="./blockquotes.xml" />
      </example>
+
+     <note>
+       <para>
+         Where the author of the quote is displayed is up to the
+         rendering of the documentation. It is common to put the
+         attribution first, but not necessary. If I had put the
+         attribution after the paragraph, it would have displayed the
+         same way.
+       </para>
+     </note>
    </section>
 
    <section xml:id="lists">
