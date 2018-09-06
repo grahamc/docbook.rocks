@@ -1,8 +1,8 @@
 body {
-  line-height: 1.7;
-  font-size: 17px;
-  margin: 0;
-  overflow-wrap: break-word
+    line-height: 1.7;
+    font-size: 17px;
+    margin: 0;
+    overflow-wrap: break-word
 }
 
 code {
@@ -10,39 +10,39 @@ code {
 }
 
 .prompt {
-  user-select: none;
-  -moz-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .note {
-  background-color: #fffde0;
-  padding-left: 1em;
-  padding-right: 1em;
-  border-left: 1em solid #fcf6b4;
-  padding-top: .5em;
-  padding-bottom: .5em;
+    background-color: #fffde0;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-left: 1em solid #fcf6b4;
+    padding-top: .5em;
+    padding-bottom: .5em;
 }
 
 code.literal, code.varname {
-  background-color: #dcdcdc66;
+    background-color: #dcdcdc66;
 }
 
 .programlisting, .screen {
-  color: white;
-  background-color: #282c34;
-  border-radius: .5em;
+    color: white;
+    background-color: #282c34;
+    border-radius: .5em;
 
-  padding-left: 1em;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  padding-right: .5em;
+    padding-left: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: .5em;
 
-  overflow: hidden;
-  white-space: pre-wrap;
+    overflow: hidden;
+    white-space: pre-wrap;
 }
 
 .hljs-keyword,
@@ -53,7 +53,7 @@ code.literal, code.varname {
 .hljs-name,
 .hljs-attr,
 .hljs-strong {
-  color: #c5a5c5;
+    color: #c5a5c5;
 }
 
 .hljs-string,
@@ -68,7 +68,7 @@ code.literal, code.varname {
 .hljs-name,
 .hljs-selector-id,
 .hljs-selector-class {
-  color: #9bc977;
+    color: #9bc977;
 }
 
 .hljs-meta,
@@ -81,37 +81,37 @@ code.literal, code.varname {
 .hljs-template-variable,
 .hljs-link,
 .hljs-bullet {
-  color: #4c81c9;
+    color: #4c81c9;
 }
 
 .hljs-emphasis {
-  font-style: italic;
+    font-style: italic;
 }
 
 
 h1.title {
-  font-size: 3em;
-  font-weight: bolder;
-  color: #282c34;
+    font-size: 3em;
+    font-weight: bolder;
+    color: #282c34;
 }
 
 body {
-  width: 100%;
-  font-family: helvetica;
+    width: 100%;
+    font-family: helvetica;
 }
 
 
 @media only screen and (max-width: 949px) {
-  .book {
-      width: 95%;
-      overflow-wrap: auto;
-      margin-left: 1em;
-      margin-right: 1em;
-  }
+    .book {
+        width: 95%;
+        overflow-wrap: auto;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
 
-  .programlisting, .screen {
-      margin-right:1em;
-  }
+    .programlisting, .screen {
+        margin-right:1em;
+    }
 }
 
 
@@ -138,15 +138,9 @@ body {
         padding-left: 1em;
     }
 
-  .programlisting, .screen {
-      margin-left: -2.5em;
-      margin-right: -2.5em;
-  }
-
-  table#escaping-characters td {
-      padding-right : 3em;
-  }
-
+    table#escaping-characters td {
+        padding-right : 3em;
+    }
 }
 
 .list-of-examples, .list-of-tables, .toc-title {
@@ -170,7 +164,7 @@ table {
     text-align: center;
 }
 table td {
-  border-top: 1px solid black;
+    border-top: 1px solid black;
 }
 
 table#escaping-characters th:nth-child(1) {
@@ -185,5 +179,20 @@ table#escaping-characters th:nth-child(2) {
 img {
     height: 1em;
     margin-bottom: -0.25em;
+    padding-left: .5em;
+}
+
+.informalfigure {
+    border-left: .5em solid #cae0a9;
+    padding-left: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.informalfigure .programlisting {
+    margin-left: 1em;
+}
+
+.note .informalfigure {
     padding-left: .5em;
 }

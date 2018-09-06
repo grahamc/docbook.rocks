@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Writing Format</th>
+      <th>How good it is</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DocBook</td>
+      <td>Really good!</td>
+    </tr>
+    <tr>
+      <td>MarkDown</td>
+      <td>Pretty great!</td>
+    </tr>
+    <tr>
+      <td>LaTeX</td>
+      <td>Great for computer scientists!</td>
+    </tr>
+  </tbody>
+</table>

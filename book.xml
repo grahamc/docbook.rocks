@@ -10,71 +10,22 @@
  <section xml:id="who-is-this-for">
    <title>Who this is for?</title>
    <para>
-     <emphasis>Me:</emphasis> I'm a quick dive in to about ten DocBook
-     tags which will let you get going and documenting pretty much
-     everything you need.
-   </para>
-   <para>
-     <emphasis>You:</emphasis> You're maybe a bit skeptical of DocBook,
-     but need to write a page or two of documentation and got spooked
-     by the extremely thorough and extremely intimidating <link
-     xlink:href="https://tdg.docbook.org/">official
-     documentation</link>.
-   </para>
-   <para>
-     You have an open mind and aren't alergic to a
-     <literal>&lt;</literal> and a <literal>&gt;</literal>.
-   </para>
- </section>
- <section xml:id="why-docbook">
-   <title>Why DocBook?</title>
-   <para>
-     The project you're working on may have chosen DocBook, and maybe
-     you're not sure why. "But why not Markdown?" is something I
-     hear a lot.
+     You want to write a page or two of documentation for your
+     favorite DocBook-using project, and didn't find or got spooked by
+     the extremely thorough and intimidating <link
+     xlink:href="https://tdg.docbook.org/">official documentation</link>.
    </para>
 
    <para>
-     In John Gruber's words, Markdown is not always the right tool for
-     the job.
-
-     <blockquote>
-       <attribution>
-         <link xlink:href="https://daringfireball.net/projects/markdown/syntax#philosophy">DaringFireball</link>
-       </attribution>
-
-       <simpara>
-         The idea for Markdown is to make it easy to read, write, and
-         edit prose. HTML is a publishing format; Markdown is a
-         writing format. Thus, Markdown's formatting syntax only
-         addresses issues that can be conveyed in plain text.
-       </simpara>
-     </blockquote>
+     This is a quick dive in to about ten DocBook tags which will let
+     you get going and documenting pretty much everything you need.
+     At the end is some fancier stuff you probably won't need.
    </para>
 
    <para>
-     DocBook is really designed <emphasis>for</emphasis> documentation.
-     Yes it is more verbose (<emphasis>explicit</emphasis>). Yeah, it
-     uses some pointy bois (<literal>&lt;</literal>, <literal>&gt;</literal>)
-     which aren't all a lot of fun to type.
-   </para>
-
-   <para>
-     These explicit ways of marking up a document are a bit annoying
-     when writing prose and paragraphs. However, they become helpful
-     when doing more complicated things. DocBook has good and
-     predictable built-in support for making tables, code snippets
-     with inline annotations, checked cross-references between
-     sections and many other features which are very useful for
-     documenting complicated projects.
-   </para>
-
-   <para>
-     DocBook is also much more than a format for writing to HTML.
-     Using a free set of what is called "Stylesheets" (not CSS
-     stylesheets) DocBook can be converted in to manpages, PDFs, and
-     yes HTML. With DocBook, indexes and tables of contents come for
-     free.
+     You don't have to have ever used DocBook before, or plan to ever
+     use it again. My goal is to give you just enough knowledge to
+     contribute some docs to your favorite DockBook-using project.
    </para>
  </section>
 
@@ -86,7 +37,7 @@
 
      <example>
        <programlisting><xi:include href="./paras.xml" parse="text" /></programlisting>
-       <xi:include href="./paras.xml" />
+       <informalfigure><xi:include href="./paras.xml" /></informalfigure>
      </example>
    </section>
 
@@ -100,7 +51,7 @@
 
      <example>
        <programlisting><xi:include href="./headers.xml" parse="text" /></programlisting>
-       <xi:include href="./headers.xml" />
+       <informalfigure><xi:include href="./headers.xml" /></informalfigure>
      </example>
 
 
@@ -110,7 +61,7 @@
 
      <example>
        <programlisting><xi:include href="./subtitles.xml" parse="text" /></programlisting>
-       <xi:include href="./subtitles.xml" />
+       <informalfigure><xi:include href="./subtitles.xml" /></informalfigure>
      </example>
    </section>
 
@@ -122,7 +73,7 @@
 
      <example>
        <programlisting><xi:include href="./blockquotes.xml" parse="text" /></programlisting>
-       <xi:include href="./blockquotes.xml" />
+       <informalfigure><xi:include href="./blockquotes.xml" /></informalfigure>
      </example>
 
      <note>
@@ -140,37 +91,42 @@
      <title>Lists</title>
 
      <para>
-       DocBook supports ordered and unordered lists.
+       DocBook supports bulleted and numbered lists.
      </para>
 
      <example>
        <programlisting><xi:include href="./list-unordered.xml" parse="text" /></programlisting>
-       <xi:include href="./list-unordered.xml" />
+       <informalfigure><xi:include href="./list-unordered.xml" /></informalfigure>
      </example>
 
      <example>
        <programlisting><xi:include href="./list-ordered.xml" parse="text" /></programlisting>
-       <xi:include href="./list-ordered.xml" />
+       <informalfigure><xi:include href="./list-ordered.xml" /></informalfigure>
      </example>
 
      <para>or a list with multiple paragraphs:</para>
 
      <example>
        <programlisting><xi:include href="./lists-paras.xml" parse="text" /></programlisting>
-       <xi:include href="./lists-paras.xml" />
+       <informalfigure><xi:include href="./lists-paras.xml" /></informalfigure>
      </example>
 
      <para>or a list with a blockquote:</para>
 
      <example>
        <programlisting><xi:include href="./lists-quote.xml" parse="text" /></programlisting>
-       <xi:include href="./lists-quote.xml" />
+       <informalfigure><xi:include href="./lists-quote.xml" /></informalfigure>
      </example>
 
-     <para>
-       It’s worth noting that it isn't possible to trigger an
-       ordered list by accident.
-     </para>
+     <note><para>
+       The <literal>&lt;listitem&gt;</literal> can't contain text
+       directly inside of it. If you want to include text, use a
+       <literal>&lt;para&gt;</literal>. You could also use a
+       <literal>&lt;blockquote&gt;</literal> or
+       <literal>&lt;programlisting&gt;</literal> or many other
+       options.
+     </para></note>
+
    </section>
 
    <section xml:id="code-blocks">
@@ -178,7 +134,7 @@
 
      <example xml:id="codeblocks-xml-with-bash">
        <programlisting language="xml"><xi:include href="./code-blocks.xml" parse="text" /></programlisting>
-       <xi:include href="./code-blocks.xml" />
+       <informalfigure><xi:include href="./code-blocks.xml" /></informalfigure>
      </example>
 
      <note>
@@ -191,7 +147,7 @@
        </para>
        <example>
          <programlisting language="xml"><xi:include href="./code-blocks-cdata.xml" parse="text" /></programlisting>
-         <xi:include href="./code-blocks-cdata.xml" />
+         <informalfigure><xi:include href="./code-blocks-cdata.xml" /></informalfigure>
        </example>
      </note>
    </section>
@@ -208,7 +164,7 @@
 
      <example>
        <programlisting><xi:include href="./link-http.xml" parse="text" /></programlisting>
-       <xi:include href="./link-http.xml" />
+       <informalfigure><xi:include href="./link-http.xml" /></informalfigure>
      </example>
 
      <para>
@@ -218,7 +174,7 @@
 
      <example>
        <programlisting><xi:include href="./link-inter.xml" parse="text" /></programlisting>
-       <xi:include href="./link-inter.xml" />
+       <informalfigure><xi:include href="./link-inter.xml" /></informalfigure>
      </example>
 
      <para>
@@ -237,7 +193,7 @@
 
      <example>
        <programlisting><xi:include href="./emphasis.xml" parse="text" /></programlisting>
-       <xi:include href="./emphasis.xml" />
+       <informalfigure><xi:include href="./emphasis.xml" /></informalfigure>
      </example>
    </section>
 
@@ -251,7 +207,7 @@
 
      <example>
        <programlisting><xi:include href="./code-inline.xml" parse="text" /></programlisting>
-       <xi:include href="./code-inline.xml" />
+       <informalfigure><xi:include href="./code-inline.xml" /></informalfigure>
      </example>
    </section>
  </chapter>
@@ -319,6 +275,15 @@
        You'll notice you only copied the commands, and not the
        prompt's <literal>$ </literal>.
      </para>
+
+     <note>
+       <para>
+         We've just learned about the <literal>&lt;screen&gt;</literal>
+         tag. A <literal>&lt;screen&gt;</literal> tag is like a
+         <literal>&lt;programlisting&gt;</literal> except it is
+         intended to show the text in a terminal window.
+       </para>
+     </note>
 
      <para>
        With Markdown you might imagine having a special fenced
@@ -419,7 +384,7 @@ $ nix-shell
      </para>
 
      <programlisting><xi:include href="./tables.xml" parse="text" /></programlisting>
-     <xi:include href="./tables.xml" />
+     <informalfigure><xi:include href="./tables.xml" /></informalfigure>
    </section>
   </chapter>
 
