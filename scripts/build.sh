@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-whoami
+export USER=$(whoami)
 
 curl https://nixos.org/nix/install | bash
 
